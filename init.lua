@@ -1,0 +1,6 @@
+require('options')
+require('packer-config')
+--require("colors-config.nightfox")
+vim.cmd('colorscheme nordfox')
+require('nvim-tree-config')
+require("keymap-config")

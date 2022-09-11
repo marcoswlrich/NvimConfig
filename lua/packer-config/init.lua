@@ -10,6 +10,17 @@ return require("packer").startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
+
+    use 'rcarriga/nvim-notify'
+    use 'nvim-lualine/lualine.nvim'
+    use 'romgrk/barbar.nvim'
+    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+    use 'norcalli/nvim-colorizer.lua'
+    use 'folke/which-key.nvim'
+    use 'akinsho/toggleterm.nvim'
+    use 'nvim-telescope/telescope.nvim'
+    use 'nvim-telescope/telescope-file-browser.nvim'
+    use 'windwp/nvim-autopairs'
     -- LSP ---
     use 'nvim-lua/plenary.nvim' -- Common utilities
     use 'onsails/lspkind-nvim' -- vscode-like pictograms
@@ -24,5 +35,5 @@ return require("packer").startup(function(use)
 
     use 'glepnir/lspsaga.nvim' -- LSP UIs
     use 'L3MON4D3/LuaSnip'
-    
+
 end)

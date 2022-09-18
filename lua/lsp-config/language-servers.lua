@@ -68,6 +68,22 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.pyright.setup {
+  on_attach = on_attach,
+  filetypes = { "python" },
+  cmd = { "pyright-langserver", "--stdio" },
+  settings = {
+    python = {
+      analysis = {
+        autoSearchPaths = true,
+        diagnosticMode = "workspace",
+        useLibraryCodeForTypes = true
+      }
+    }
+  },
+  single_file_suport = true,
+}
+
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }

@@ -1,5 +1,5 @@
 require"toggleterm".setup {
-  size = 13,
+  size = 14,
   open_mapping = [[<c-\>]],
   shade_filetypes = {},
   shade_terminals = true,
@@ -8,3 +8,4 @@ require"toggleterm".setup {
   persist_size = true,
   direction = 'horizontal'
 }
+

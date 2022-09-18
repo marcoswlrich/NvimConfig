@@ -14,13 +14,14 @@ return require("packer").startup(function(use)
     use 'rcarriga/nvim-notify'
     use 'nvim-lualine/lualine.nvim'
     use 'romgrk/barbar.nvim'
-    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     use 'norcalli/nvim-colorizer.lua'
     use 'folke/which-key.nvim'
     use 'akinsho/toggleterm.nvim'
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
     use 'windwp/nvim-autopairs'
+    -- Treesiterr & Synta
+    use "nvim-treesitter/nvim-treesitter"
     -- LSP ---
     use 'nvim-lua/plenary.nvim' -- Common utilities
     use 'onsails/lspkind-nvim' -- vscode-like pictograms

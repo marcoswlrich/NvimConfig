@@ -20,8 +20,13 @@ return require("packer").startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
     use 'windwp/nvim-autopairs'
-    -- Treesiterr & Synta
+    -- Treesiterr & Syntax 
     use "nvim-treesitter/nvim-treesitter"
+    use "JoosepAlviste/nvim-ts-context-commentstring"
+    use "p00f/nvim-ts-rainbow"
+    use "nvim-treesitter/playground"
+    use "windwp/nvim-ts-autotag"
+    use "nvim-treesitter/nvim-treesitter-textobjects"
     -- LSP ---
     use 'nvim-lua/plenary.nvim' -- Common utilities
     use 'onsails/lspkind-nvim' -- vscode-like pictograms

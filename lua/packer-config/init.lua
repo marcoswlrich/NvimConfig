@@ -10,7 +10,7 @@ return require("packer").startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-
+    --Utilidades
     use 'rcarriga/nvim-notify'
     use 'nvim-lualine/lualine.nvim'
     use 'romgrk/barbar.nvim'
@@ -41,5 +41,6 @@ return require("packer").startup(function(use)
 
     use 'glepnir/lspsaga.nvim' -- LSP UIs
     use 'L3MON4D3/LuaSnip'
+
 
 end)

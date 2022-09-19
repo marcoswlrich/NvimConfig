@@ -18,5 +18,7 @@ require("lsp-config.cmp")
 require("lsp-config.null-ls")
 require("lsp-config.lspkind")
 require("lsp-config.mason")
+require("notify-config")
+
 
 

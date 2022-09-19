@@ -32,5 +32,3 @@ set.hidden = true
 set.mouse = "a"
 
 set.fillchars = "eob: "
-
-vim.notify = require("notify")

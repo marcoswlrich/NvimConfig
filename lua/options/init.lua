@@ -1,34 +1,58 @@
+local opt = vim.opt -- for conciseness
 
-local set = vim.opt
+opt.backup = false
+opt.writebackup = false
+opt.cmdheight = 1
+opt.pumheight = 10
+opt.timeoutlen = 1000
 
-set.expandtab = true
-set.smarttab = true
-set.shiftwidth = 2
-set.tabstop = 2
+opt.hlsearch = true
+opt.incsearch = true
 
-set.termguicolors = true
-set.showmode = false
+-- line numbers
+opt.relativenumber = true -- show relative line numbers
+opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
-set.hlsearch = true
-set.incsearch = true
-set.ignorecase = true
-set.smartcase = true
+-- tabs & indentation
+opt.tabstop = 2 
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.smarttab = true
+opt.autoindent = true -- copy indent from current line when starting new one
 
-set.splitbelow = true
-set.splitright = true
-set.wrap = false
-set.breakindent = true
-set.scrolloff = 5
-set.fileencoding = "utf-8"
-set.encoding = 'utf-8'
-set.conceallevel = 2
+-- line wrapping
+opt.wrap = false -- disable line wrapping
 
-set.relativenumber = true
-set.cursorline = true
-set.wildmenu = true
-set.completeopt = "menuone,noselect"
+-- search settings
+opt.ignorecase = true -- ignore case when searching
+opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+opt.smartindent = true
 
-set.hidden = true
-set.mouse = "a"
+-- cursor line
+opt.cursorline = true -- highlight the current cursor line
 
-set.fillchars = "eob: "
+-- (have to use iterm2 or any other true color terminal)
+opt.termguicolors = true
+opt.showmode = false
+opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+
+-- backspace
+opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+
+-- clipboard
+opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+
+-- split windows
+opt.splitright = true -- split vertical window to the right
+opt.splitbelow = true -- split horizontal window to the bottom
+
+opt.iskeyword:append("-") -- consider string-string as whole word
+opt.mouse = "a"
+
+opt.fileencoding = "utf-8"
+opt.encoding = 'utf-8'
+opt.numberwidth = 4
+opt.guifont = "monospace:h17"
+
+opt.completeopt = "menuone,noselect"

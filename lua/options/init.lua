@@ -14,7 +14,7 @@ opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
-opt.tabstop = 2 
+opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.smarttab = true

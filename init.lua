@@ -1,7 +1,7 @@
 require('options')
 require("packer-plugins")
-vim.cmd("colorscheme nordfox")
-require("keymap-config")
+vim.cmd("colorscheme tokyonight-moon") -- duskfox nordfox tokyonight-night/storm/moon/
+require("keymap-config") -- catppuccin-frappe/macchiato/mocha
 require("tree-config")
 require("lualine-config")
 require("barbar-config")
@@ -16,5 +16,5 @@ require("telescope-config")
 require("treesitter-config")
 require("ts-context")
 require('lsp.lspsaga')
-require('colorizer')
+require('colorizer-config')
 require('utils')

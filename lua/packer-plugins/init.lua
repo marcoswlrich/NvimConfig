@@ -48,6 +48,12 @@ return packer.startup(function(use)
   -- Plugin Mangager
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
+  -- Lua Development
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/popup.nvim"
+
+  use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+
   use 'nvim-lualine/lualine.nvim'
   use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
   use {
@@ -60,10 +66,11 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "lunarvim/onedarker.nvim"
-  use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
   use "EdenEast/nightfox.nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
+  use 'rmehri01/onenord.nvim'
+  use "ellisonleao/gruvbox.nvim"
 
   --LSP
   use {

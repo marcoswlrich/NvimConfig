@@ -90,6 +90,7 @@ return packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'jose-elias-alvarez/typescript.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jay-babu/mason-null-ls.nvim'
 
   use "windwp/nvim-autopairs"
   use 'nvim-treesitter/nvim-treesitter'
@@ -110,6 +111,9 @@ return packer.startup(function(use)
     'akinsho/toggleterm.nvim',
     tag = '*'
   })
+
+  --git
+  use 'lewis6991/gitsigns.nvim'
 
 
 

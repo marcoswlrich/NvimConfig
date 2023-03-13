@@ -71,6 +71,7 @@ return packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'rmehri01/onenord.nvim'
   use "ellisonleao/gruvbox.nvim"
+  use { 'rose-pine/neovim', as = 'rose-pine' }
 
   --LSP
   use {

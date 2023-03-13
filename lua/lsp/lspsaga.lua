@@ -3,7 +3,11 @@ local keymap = vim.keymap.set
 require('lspsaga').setup({
   ui = {
     border = 'rounded',
-  }
+  },
+  definition = {
+    edit = "<CR>",
+    quit = { "q", "<ESC>" },
+  },
 })
 
 keymap("n", "<leader>k", "<cmd>Lspsaga hover_doc<CR>")

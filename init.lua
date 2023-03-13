@@ -1,7 +1,7 @@
 require('options')
 require("packer-plugins")
-vim.cmd("colorscheme tokyonight-moon") -- duskfox nordfox tokyonight-night/storm/moon/
-require("keymap-config") -- catppuccin-frappe/macchiato/mocha
+vim.cmd("colorscheme rose-pine-moon") -- duskfox nordfox tokyonight-night/storm/moon/
+require("keymap-config") -- catppuccin-frappe/macchiato/mocha  rose-pine
 require("tree-config")
 require("lualine-config")
 require("barbar-config")

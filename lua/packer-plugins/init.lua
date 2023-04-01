@@ -118,6 +118,9 @@ return packer.startup(function(use)
   --git
   use 'lewis6991/gitsigns.nvim'
 
+  --Bookmarks
+  use "MattesGroeger/vim-bookmarks"
+  use "tom-anders/telescope-vim-bookmarks.nvim"
 
 
   if PACKER_BOOTSTRAP then

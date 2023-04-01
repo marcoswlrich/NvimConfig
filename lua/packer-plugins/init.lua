@@ -73,6 +73,8 @@ return packer.startup(function(use)
   use "ellisonleao/gruvbox.nvim"
   use { 'rose-pine/neovim', as = 'rose-pine' }
 
+  -- Dashboard
+  use "goolord/alpha-nvim"
   --LSP
   use {
     "williamboman/mason.nvim",

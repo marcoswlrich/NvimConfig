@@ -137,6 +137,7 @@ return packer.startup(function(use)
   use 'karb94/neoscroll.nvim'
   use 'nacro90/numb.nvim'
   use "petertriho/nvim-scrollbar"
+  use "folke/which-key.nvim"
 
   ----------
   -- git

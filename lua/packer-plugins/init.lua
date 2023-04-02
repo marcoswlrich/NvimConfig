@@ -48,7 +48,9 @@ return packer.startup(function(use)
   -- Plugin Mangager
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
+  ------------------
   -- Lua Development
+  ------------------
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "nvim-lua/popup.nvim"
 
@@ -60,11 +62,15 @@ return packer.startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-  --Tree
+  ----------
+  -- Tree
+  ----------
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
 
+  ---------------
   -- Colorschemes
+  ---------------
   use "lunarvim/onedarker.nvim"
   use "folke/tokyonight.nvim"
   use "EdenEast/nightfox.nvim"
@@ -73,16 +79,23 @@ return packer.startup(function(use)
   use "ellisonleao/gruvbox.nvim"
   use { 'rose-pine/neovim', as = 'rose-pine' }
 
+  ------------
   -- Dashboard
+  ------------
   use "goolord/alpha-nvim"
-  --LSP
+
+  ----------
+  -- LSP
+  ----------
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
 
-  --CMP
+  ----------
+  -- CMP
+  ----------
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -106,7 +119,9 @@ return packer.startup(function(use)
     branch = "main",
   })
 
-  --Color
+  ----------
+  -- Utils
+  ----------
   use "NvChad/nvim-colorizer.lua"
 
   use 'numToStr/Comment.nvim'
@@ -114,11 +129,23 @@ return packer.startup(function(use)
     'akinsho/toggleterm.nvim',
     tag = '*'
   })
+  use "kylechui/nvim-surround"
+  use({
+    "0x100101/lab.nvim",
+    build = "cd js && npm ci",
+  })
+  use 'karb94/neoscroll.nvim'
+  use 'nacro90/numb.nvim'
+  use "petertriho/nvim-scrollbar"
 
-  --git
+  ----------
+  -- git
+  ----------
   use 'lewis6991/gitsigns.nvim'
 
-  --Bookmarks
+  ------------
+  -- Bookmarks
+  ------------
   use "MattesGroeger/vim-bookmarks"
   use "tom-anders/telescope-vim-bookmarks.nvim"
 

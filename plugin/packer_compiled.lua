@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
+  ["lab.nvim"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/lab.nvim",
+    url = "https://github.com/0x100101/lab.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -164,6 +169,11 @@ _G.packer_plugins = {
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
@@ -173,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["numb.nvim"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/numb.nvim",
+    url = "https://github.com/nacro90/numb.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -193,6 +208,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-scrollbar"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/nvim-scrollbar",
+    url = "https://github.com/petertriho/nvim-scrollbar"
+  },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-tree.lua"] = {
     loaded = true,

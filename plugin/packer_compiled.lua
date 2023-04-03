@@ -124,6 +124,21 @@ _G.packer_plugins = {
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["gist.nvim"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/gist.nvim",
+    url = "https://github.com/rawnly/gist.nvim"
+  },
+  ["git-blame.nvim"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
+    url = "https://github.com/f-person/git-blame.nvim"
+  },
+  ["gitlinker.nvim"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/gitlinker.nvim",
+    url = "https://github.com/ruifm/gitlinker.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -169,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neogit = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
+  },
   ["neoscroll.nvim"] = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
@@ -203,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/NvChad/nvim-colorizer.lua"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -279,6 +304,11 @@ _G.packer_plugins = {
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["telekasten.nvim"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/telekasten.nvim",
+    url = "https://github.com/renerocksai/telekasten.nvim"
+  },
   ["telescope-vim-bookmarks.nvim"] = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/telescope-vim-bookmarks.nvim",
@@ -318,6 +348,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

@@ -62,6 +62,7 @@ return packer.startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+  use "renerocksai/telekasten.nvim"
   ----------
   -- Tree
   ----------
@@ -138,11 +139,16 @@ return packer.startup(function(use)
   use 'nacro90/numb.nvim'
   use "petertriho/nvim-scrollbar"
   use "folke/which-key.nvim"
+  use 'mfussenegger/nvim-dap'
 
   ----------
   -- git
   ----------
   use 'lewis6991/gitsigns.nvim'
+  use "f-person/git-blame.nvim"
+  use "ruifm/gitlinker.nvim"
+  use 'TimUntersberger/neogit'
+  use "rawnly/gist.nvim"
 
   ------------
   -- Bookmarks

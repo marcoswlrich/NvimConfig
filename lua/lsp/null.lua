@@ -25,7 +25,7 @@ null_ls.setup({
 			end,
 		}),
 		formatting.black,
-		formatting.stylua,
+		--formatting.stylua,
 		formatting.shfmt,
 		--formatting.google_java_format,
 		diagnostics.shellcheck,

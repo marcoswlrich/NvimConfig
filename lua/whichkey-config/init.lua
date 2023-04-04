@@ -108,7 +108,7 @@ local mappings = {
   w = { "<cmd>w<CR>", "Write" },
   q = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" },
   ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
-  c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  x = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["gy"] = "Link",
   p = {
     name = "Packer",
@@ -129,6 +129,13 @@ local mappings = {
     -- a = { ":RestoreSession<cr>", "test" },
     -- a = { ":RestoreSessionFromFile<cr>", "test" },
     -- a = { ":DeleteSession<cr>", "test" },
+  },
+  c = {
+    name = "Typescript",
+    F = { '<cmd>TypescriptFixAll<CR>', 'fix all' },
+    i = { '<cmd>TypescriptAddMissingImports<CR>', 'import all' },
+    o = { '<cmd>TypescriptOrganizeImports<CR>', 'organize imports' },
+    u = { '<cmd>TypescriptRemoveUnused<CR>', 'remove unused' },
   },
   d = {
     name = "Debug",
@@ -224,16 +231,19 @@ local mappings = {
     t = { '<cmd>lua require("user.functions").toggle_diagnostics()<cr>', "Toggle Diagnostics" },
     u = { "<cmd>LuaSnipUnlinkCurrent<cr>", "Unlink Snippet" },
   },
-  -- s = {
-  --   name = "Surround",
-  --   ["."] = { "<cmd>lua require('surround').repeat_last()<cr>", "Repeat" },
-  --   a = { "<cmd>lua require('surround').surround_add(true)<cr>", "Add" },
-  --   d = { "<cmd>lua require('surround').surround_delete()<cr>", "Delete" },
-  --   r = { "<cmd>lua require('surround').surround_replace()<cr>", "Replace" },
-  --   q = { "<cmd>lua require('surround').toggle_quotes()<cr>", "Quotes" },
-  --   b = { "<cmd>lua require('surround').toggle_brackets()<cr>", "Brackets" },
-  -- },
-
+  m = {
+    name = "Markdown",
+    m = { '<cmd>MarkdownPreviewToggle<CR>', 'markdown preview' },
+  },
+  S = {
+    name = "Surround",
+    ["."] = { "<cmd>lua require('surround').repeat_last()<cr>", "Repeat" },
+    a = { "<cmd>lua require('surround').surround_add(true)<cr>", "Add" },
+    d = { "<cmd>lua require('surround').surround_delete()<cr>", "Delete" },
+    r = { "<cmd>lua require('surround').surround_replace()<cr>", "Replace" },
+    q = { "<cmd>lua require('surround').toggle_quotes()<cr>", "Quotes" },
+    b = { "<cmd>lua require('surround').toggle_brackets()<cr>", "Brackets" },
+  },
   t = {
     name = "Terminal",
     ["1"] = { ":1ToggleTerm<cr>", "1" },
@@ -253,6 +263,16 @@ local mappings = {
     h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" },
     p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" },
     r = { "<cmd>TSToggle rainbow<cr>", "Rainbow" },
+  },
+  y = {
+    name = "Yarn",
+    c = { '<cmd>lua require("package-info").change_version()<CR>', 'change version' },
+    d = { '<cmd>lua require("package-info").delete()<CR>', 'delete package' },
+    h = { "<cmd>lua require('package-info').hide()<CR>", 'hide' },
+    i = { '<cmd>lua require("package-info").install()<CR>', 'install new package' },
+    r = { '<cmd>lua require("package-info").reinstall()<CR>', 'reinstall dependencies' },
+    s = { '<cmd>lua require("package-info").show()<CR>', 'show' },
+    u = { '<cmd>lua require("package-info").update()<CR>', 'update package' },
   },
   -- z = {
   --   name = "Zen",

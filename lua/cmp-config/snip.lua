@@ -36,3 +36,6 @@ ls.add_snippets('typescriptreact', {
     t('(){return null}'),
   }),
 })
+
+require("luasnip.loaders.from_vscode").load({
+  include = { "python", "html", "javascript", "typescript", "javascriptreact", "typescriptreact", "css", "sass", "stylus", "markdown", "rust" } })

@@ -67,4 +67,24 @@ require("mason-lspconfig").setup_handlers({
       single_file_suport = true,
     }))
   end,
+  rust_analyzer = function()
+    require('lspconfig').rust_analyzer.setup(vim.tbl_extend("force", lsp_config, {
+      on_attach = function(_, bufnr)
+        on_attach(_, bufnr)
+      end,
+      cmp = { "rustup", "run", "stable", "rust-analyzer" },
+      filetypes = { "rust" },
+      settings = {
+        ["rust-analyzer"] = {
+          lens = {
+            enable = true,
+          },
+          checkOnSave = {
+            enable = true,
+            command = "clippy",
+          },
+        },
+      },
+    }))
+  end
 })

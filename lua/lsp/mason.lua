@@ -1,4 +1,7 @@
-require("mason").setup()
+require("mason").setup({
+  log_level = vim.log.levels.INFO,
+  max_concurrent_installers = 4,
+})
 require("mason-lspconfig").setup({
   ensure_installed = {
     'lua_ls',

@@ -97,9 +97,10 @@ return packer.startup(function(use)
   ----------
   use {
     "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
   }
+  use "williamboman/mason-lspconfig.nvim"
+  use "neovim/nvim-lspconfig"
 
   ----------
   -- CMP

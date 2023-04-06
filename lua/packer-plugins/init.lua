@@ -148,6 +148,7 @@ return packer.startup(function(use)
   use "petertriho/nvim-scrollbar"
   use "folke/which-key.nvim"
   use 'mfussenegger/nvim-dap'
+  use "folke/zen-mode.nvim"
 
   ----------
   -- git

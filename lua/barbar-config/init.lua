@@ -9,26 +9,23 @@ require 'bufferline'.setup {
     button = '',
     -- Enables / disables diagnostic symbols
     diagnostics = {
-      [vim.diagnostic.severity.ERROR] = { enabled = true, icon = 'ﬀ' },
+      [vim.diagnostic.severity.ERROR] = { enabled = false, icon = 'ﬀ' },
       [vim.diagnostic.severity.WARN] = { enabled = false },
       [vim.diagnostic.severity.INFO] = { enabled = false },
-      [vim.diagnostic.severity.HINT] = { enabled = true },
+      [vim.diagnostic.severity.HINT] = { enabled = false },
     },
     filetype = {
       -- Sets the icon's highlight group.
       -- If false, will use nvim-web-devicons colors
       custom_colors = false,
-
       -- Requires `nvim-web-devicons` if `true`
       enabled = true,
     },
     separator = { left = '▎', right = '' },
-
     -- Configure the icons on the bufferline when modified or pinned.
     -- Supports all the base icon options.
     modified = { button = '●' },
     pinned = { button = '車' },
-
     -- Configure the icons on the bufferline based on the visibility of a buffer.
     -- Supports all the base icon options, plus `modified` and `pinned`.
     alternate = { filetype = { enabled = false } },

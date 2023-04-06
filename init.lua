@@ -1,7 +1,7 @@
 require("options")
 require("packer-plugins")
 vim.cmd("colorscheme rose-pine-moon") -- duskfox nordfox tokyonight-night/storm/moon/
-require("keymap-config") -- catppuccin-frappe/macchiato/mocha  rose-pine
+require("keymap-config")              -- catppuccin-frappe/macchiato/mocha  rose-pine
 require("tree-config")
 require("lualine-config")
 require("barbar-config")
@@ -19,6 +19,7 @@ require("ts-context")
 require("lsp.lspsaga")
 require("colorizer-config")
 require("utils")
+require('toggleterm-config')
 require("gitsigns-config")
 require("git-config")
 require("neogit-config")
@@ -33,3 +34,4 @@ require("dap-config")
 require("tlkasten-config")
 require("package-info-config")
 require("react-snip")
+require('zen-mode-config')

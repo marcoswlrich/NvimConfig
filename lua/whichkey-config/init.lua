@@ -283,13 +283,13 @@ local mappings = {
     s = { '<cmd>lua require("package-info").show()<CR>', 'show' },
     u = { '<cmd>lua require("package-info").update()<CR>', 'update package' },
   },
-  -- z = {
-  --   name = "Zen",
-  --   z = { "<cmd>TZAtaraxis<cr>", "Zen" },
-  --   m = { "<cmd>TZMinimalist<cr>", "Minimal" },
-  --   n = { "<cmd>TZNarrow<cr>", "Narrow" },
-  --   f = { "<cmd>TZFocus<cr>", "Focus" },
-  -- },
+  z = {
+    name = "Zen",
+    z = { "<cmd>TZAtaraxis<cr>", "Zen" },
+    m = { "<cmd>TZMinimalist<cr>", "Minimal" },
+    n = { "<cmd>TZNarrow<cr>", "Narrow" },
+    f = { "<cmd>TZFocus<cr>", "Focus" },
+  },
 }
 
 local vopts = {

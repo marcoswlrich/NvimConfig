@@ -34,15 +34,19 @@ require 'nvim-treesitter.configs'.setup {
   },
   rainbow = {
     enable = true,
-    extended_mode = true,
-    max_file_lines = nil
+    -- list of languages you want to disable the plugin for
+    disable = { 'jsx', 'cpp' },
+    -- Which query to use for finding delimiters
+    query = 'rainbow-parens',
+    -- Highlight the entire buffer all at once
+    strategy = require('ts-rainbow').strategy.global,
   }
 }
 
 require('template-string').setup({
   filetypes = { 'typescript', 'javascript', 'typescriptreact', 'javascriptreact', 'python' }, -- filetypes where the plugin is active
-  jsx_brackets = true, -- must add brackets to jsx attributes
-  remove_template_string = false, -- remove backticks when there are no template string
+  jsx_brackets = true,                                                                        -- must add brackets to jsx attributes
+  remove_template_string = false,                                                             -- remove backticks when there are no template string
   restore_quotes = {
     -- quotes used when "remove_template_string" option is enabled
     normal = [[']],

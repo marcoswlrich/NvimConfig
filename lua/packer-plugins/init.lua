@@ -95,10 +95,7 @@ return packer.startup(function(use)
   ----------
   -- LSP
   ----------
-  use {
-    "williamboman/mason.nvim",
-    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
-  }
+  use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
 
@@ -121,7 +118,7 @@ return packer.startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'windwp/nvim-ts-autotag'
-  use 'p00f/nvim-ts-rainbow'
+  use 'HiPhish/nvim-ts-rainbow2'
   use 'axelvc/template-string.nvim'
   use({
     "glepnir/lspsaga.nvim",

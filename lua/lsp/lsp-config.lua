@@ -105,5 +105,17 @@ require("mason-lspconfig").setup_handlers({
         },
       },
     }))
+  end,
+  clangd = function()
+    require('lspconfig').clangd.setup(vim.tbl_extend("force", lsp_config, {
+      on_attach = function(_, bufnr)
+        on_attach(_, bufnr)
+      end,
+      cmp = { "clangd" },
+      filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+      init_options = {
+        buildDirectory = "build"
+      },
+    }))
   end
 })

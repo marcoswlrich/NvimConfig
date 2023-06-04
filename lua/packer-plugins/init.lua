@@ -95,7 +95,7 @@ return packer.startup(function(use)
   ----------
   -- LSP
   ----------
-  use "williamboman/mason.nvim"
+  use { "williamboman/mason.nvim", run = ":MasonUpdate" }
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
 
@@ -146,7 +146,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use 'mfussenegger/nvim-dap'
   use "folke/zen-mode.nvim"
-
+  use 'wakatime/vim-wakatime'
   ----------
   -- git
   ----------

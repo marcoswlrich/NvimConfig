@@ -369,6 +369,11 @@ _G.packer_plugins = {
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
   },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/vim-wakatime",
+    url = "https://github.com/wakatime/vim-wakatime"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/marcoswlrich/.local/share/nvim/site/pack/packer/start/which-key.nvim",

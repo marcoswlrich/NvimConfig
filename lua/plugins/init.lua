@@ -80,6 +80,17 @@ require("lazy").setup({
   "onsails/lspkind-nvim",
   "saadparwaiz1/cmp_luasnip",
   "jose-elias-alvarez/typescript.nvim",
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
+    end
+  },
   "jose-elias-alvarez/null-ls.nvim",
   {
     "jay-babu/mason-null-ls.nvim",
@@ -159,5 +170,34 @@ require("lazy").setup({
   },
   "MattesGroeger/vim-bookmarks",
   "tom-anders/telescope-vim-bookmarks.nvim",
-  "leoluz/nvim-dap-go"
+  "leoluz/nvim-dap-go",
+  {
+    "zbirenbaum/copilot.lua",
+    enabled = true,
+    cmd = "Copilot",
+    event = "InsertEnter"
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    enabled = true,
+    opts = {
+      -- char = "▏",
+      char = "│",
+      filetype_exclude = { "help", "alpha", "dashboard", "neo-tree", "Trouble", "lazy" },
+      show_trailing_blankline_indent = false,
+      show_current_context = false,
+    },
+  },
+  {
+    "j-hui/fidget.nvim",
+    branch = "legacy",
+    config = function()
+      require('fidget').setup()
+    end
+  }
 })

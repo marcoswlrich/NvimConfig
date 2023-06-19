@@ -24,7 +24,7 @@ dashboard.section.buttons.val = {
   dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
   dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
   dashboard.button("s", "  Find Session", ":SearchSession<CR>"),
-  dashboard.button("u", "  Update", ":PackerSync<CR>"),
+  dashboard.button("u", "  Lazy", ":Lazy<CR>"),
   dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 

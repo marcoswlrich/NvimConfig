@@ -20,19 +20,21 @@ cmp.setup({
       end
     end, { "i", "s" }),
     ['<c-b>'] = cmp.mapping(function(fallback)
-      if luasnip.jumpable( -1) then
-        luasnip.jump( -1)
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
       else
         fallback()
       end
     end, { "i", "s" })
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp',
+    {
+      name = 'nvim_lsp',
       entry_filter = function(entry)
         return require('cmp.types').lsp.CompletionItemKind[entry:get_kind()] ~= 'Text'
       end
     },
+    { name = "copilot", group_index = 2 },
     { name = 'luasnip' }, -- For luasnip users.
   }, {
     { name = 'buffer' },

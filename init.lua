@@ -1,5 +1,5 @@
 require("options")
-require("packer-plugins")
+require("plugins")
 require("theme-config")
 vim.cmd("colorscheme tokyonight") -- duskfox nordfox tokyonight-night/storm/moon/
 require("keymap-config")          -- catppuccin-frappe/macchiato/mocha  rose-pine
@@ -32,7 +32,8 @@ require("numb-config")
 require("scrollbar-config")
 require("whichkey-config")
 require("dap-config")
-require("tlkasten-config")
 require("package-info-config")
 require("react-snip")
 require('zen-mode-config')
+require("copilot-config")
+require("rust-tools-config")

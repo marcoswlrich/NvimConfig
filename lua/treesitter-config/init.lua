@@ -15,6 +15,9 @@ require 'nvim-treesitter.configs'.setup {
     "markdown_inline",
     "dockerfile"
   },
+  context_commentstring = {
+    enable = true,
+  },
 
   sync_install = false,
   auto_install = true,

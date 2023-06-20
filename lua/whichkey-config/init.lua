@@ -111,12 +111,11 @@ local mappings = {
   x = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["gy"] = "Link",
   p = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>", "Compile" },
-    i = { "<cmd>PackerInstall<cr>", "Install" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    S = { "<cmd>PackerStatus<cr>", "Status" },
-    u = { "<cmd>PackerUpdate<cr>", "Update" },
+    name = "Python",
+    c = { "<cmd>PyrightOrganizeImports<cr>", "Organize Imports" },
+    i = { "<cmd>lua require('dap-python').test_class()<CR>", "Debug Class" },
+    s = { "<cmd>lua require('dap-python').test_method()<CR>", "Debug Method" },
+    S = { "<cmd>lua require('dap-python').debug_selection()<CR>", "Debug Selection" },
   },
   s = {
     name = "Session",

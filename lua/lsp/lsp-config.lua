@@ -58,6 +58,8 @@ require("mason-lspconfig").setup_handlers({
       settings = {
         python = {
           analysis = {
+            autoImportCompletions = true,
+            typeCheckingMode = "off",
             autoSearchPaths = true,
             diagnosticMode = "workspace",
             useLibraryCodeForTypes = true,
@@ -65,6 +67,20 @@ require("mason-lspconfig").setup_handlers({
         },
       },
       single_file_suport = true,
+    }))
+  end,
+  ruff_lsp = function()
+    require('lspconfig').ruff_lsp.setup(vim.tbl_extend("force", lsp_config, {
+      on_attach = function(_, bufnr)
+        on_attach(_, bufnr)
+      end,
+      init_options = {
+        settings = {
+          -- Any extra CLI arguments for `ruff` go here.
+          args = { "--max-line-length=180" },
+        },
+      },
+
     }))
   end,
   rust_analyzer = function()

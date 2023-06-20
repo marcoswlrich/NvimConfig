@@ -20,7 +20,7 @@ require("mason-lspconfig").setup({
     'html',
     'jdtls',
     'jsonls',
-    'pyright'
+    'pyright',
   },
   automatic_installation = true,
 })
@@ -30,6 +30,10 @@ require('mason-null-ls').setup({
     "prettier",
     "stylua",
     "eslint_d",
+    "mypy",
+    "ruff",
+    "black",
   },
   automatic_installation = true,
+  handlers = {},
 })

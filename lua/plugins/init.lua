@@ -144,6 +144,7 @@ require("lazy").setup({
       "theHamsta/nvim-dap-virtual-text",
       "nvim-telescope/telescope-dap.nvim",
       "folke/neodev.nvim",
+      "mfussenegger/nvim-dap-python",
     },
   },
   "folke/zen-mode.nvim",

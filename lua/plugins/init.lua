@@ -91,6 +91,7 @@ require("lazy").setup({
 			vim.g.rustfmt_autosave = 1
 		end,
 	},
+	{ "saecki/crates.nvim", ft = { "rust", "toml" } },
 	"jose-elias-alvarez/null-ls.nvim",
 	{
 		"jay-babu/mason-null-ls.nvim",

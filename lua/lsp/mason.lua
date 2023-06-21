@@ -22,6 +22,7 @@ require("mason-lspconfig").setup({
 		"jdtls",
 		"jsonls",
 		"pyright",
+		"gopls",
 	},
 	automatic_installation = true,
 })

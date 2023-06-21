@@ -6,6 +6,8 @@ require("nvim-treesitter.configs").setup({
 		"lua",
 		"python",
 		"rust",
+		"go",
+		"gomod",
 		"json",
 		"graphql",
 		"regex",

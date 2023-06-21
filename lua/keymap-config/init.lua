@@ -12,6 +12,7 @@ keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+keymap("i", "jj", "<ESC>", opts)
 keymap("i", "jk", "<ESC>", opts)
 
 -- WINDOWS
@@ -24,32 +25,25 @@ keymap("n", "<leader>sx", ":close<CR>", opts) -- close split window
 ------------------
 --VisuaL Mode
 ------------------
-keymap('v', '<c-a>', 'gg<S-v>G', opts)
+keymap("v", "<c-a>", "gg<S-v>G", opts)
 
 -- Stay in indent mode
-keymap('v', '<', '<gv', opts)
-keymap('v', '>', '>gv', opts)
-
--- Move text up and down
-keymap('v', '<A-j>', ':m .+1<CR>==', opts)
-keymap('v', '<A-k>', ':m .-2<CR>==', opts)
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
 
 -- Paste
-keymap('v', 'p', '"_dP', opts)
-keymap('x', '<leader>pp', '"_dP', opts)
+keymap("v", "p", '"_dP', opts)
+keymap("v", "P", '"_dP', opts)
 
 -- Move text up and down
-keymap('x', 'J', ":move '>+1<CR>gv-gv", opts)
-keymap('x', 'K', ":move '<-2<CR>gv-gv", opts)
-keymap('x', '<A-j>', ":move '>+1<CR>gv-gv", opts)
-keymap('x', '<A-k>', ":move '<-2<CR>gv-gv", opts)
-
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 ----------------------
 -- Plugin Keybinds
 ----------------------
 
-keymap("n", "<leader>e", '<cmd>NvimTreeToggle<cr>', opts)
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 -- Terminal
 keymap("n", "<leader>th", "<CMD>ToggleTerm size=10 direction=horizontal<CR>", opts)
 keymap("n", "<leader>tv", "<CMD>ToggleTerm size=80 direction=vertical<CR>", opts)

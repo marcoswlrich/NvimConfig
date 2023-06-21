@@ -14,6 +14,7 @@ require("mason-lspconfig").setup({
 		"graphql",
 		"rust_analyzer",
 		"yamlls",
+		"clangd",
 		"cssls",
 		"cssmodules_ls",
 		"emmet_ls",

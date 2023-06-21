@@ -215,4 +215,5 @@ require("lazy").setup({
 			vim.cmd([[silent! GoInstallDeps]])
 		end,
 	},
+	{ "is0n/jaq-nvim" },
 })

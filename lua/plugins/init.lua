@@ -75,7 +75,8 @@ require("lazy").setup({
 	{
 		"L3MON4D3/LuaSnip",
 		-- follow latest release.
-		version = "1.2.1.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		version = "1.2.1.*",
+		dependencies = { "rafamadriz/friendly-snippets" }, -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 	},
 	"onsails/lspkind-nvim",
 	"saadparwaiz1/cmp_luasnip",
@@ -216,4 +217,10 @@ require("lazy").setup({
 		end,
 	},
 	{ "is0n/jaq-nvim" },
+	{
+		"folke/trouble.nvim",
+		cmd = { "TroubleToggle", "Trouble" },
+		opts = { use_diagnostic_signs = true },
+		lazy = true,
+	},
 })

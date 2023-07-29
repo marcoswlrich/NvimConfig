@@ -31,7 +31,6 @@ require("mason-null-ls").setup({
 	ensure_installed = {
 		"prettier",
 		"stylua",
-		"eslint_d",
 		"mypy",
 		"ruff",
 		"black",

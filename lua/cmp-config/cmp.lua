@@ -34,7 +34,7 @@ cmp.setup({
 				return require("cmp.types").lsp.CompletionItemKind[entry:get_kind()] ~= "Text"
 			end,
 		},
-		{ name = "copilot", group_index = 2 },
+		--{ name = "copilot", group_index = 2 },
 		{ name = "crates" },
 		{ name = "luasnip" }, -- For luasnip users.
 	}, {

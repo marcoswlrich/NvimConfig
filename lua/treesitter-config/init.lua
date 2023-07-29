@@ -10,6 +10,7 @@ require("nvim-treesitter.configs").setup({
 		"gomod",
 		"json",
 		"graphql",
+		"javascript",
 		"regex",
 		"vim",
 		"yaml",
@@ -18,6 +19,7 @@ require("nvim-treesitter.configs").setup({
 		"markdown",
 		"markdown_inline",
 		"dockerfile",
+		"typescript",
 	},
 	context_commentstring = {
 		enable = true,
@@ -25,7 +27,7 @@ require("nvim-treesitter.configs").setup({
 
 	sync_install = false,
 	auto_install = true,
-	ignore_install = { "javascript" },
+	ignore_install = {},
 
 	highlight = {
 		enable = true,
@@ -38,15 +40,6 @@ require("nvim-treesitter.configs").setup({
 	},
 	autotag = {
 		enable = true,
-	},
-	rainbow = {
-		enable = true,
-		-- list of languages you want to disable the plugin for
-		disable = { "jsx", "cpp" },
-		-- Which query to use for finding delimiters
-		query = "rainbow-parens",
-		-- Highlight the entire buffer all at once
-		strategy = require("ts-rainbow").strategy.global,
 	},
 })
 

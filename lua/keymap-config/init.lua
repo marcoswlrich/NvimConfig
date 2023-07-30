@@ -43,7 +43,7 @@ keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 -- Plugin Keybinds
 ----------------------
 
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>e", ":Neotree<CR>", opts)
 -- Terminal
 keymap("n", "<leader>th", "<CMD>ToggleTerm size=10 direction=horizontal<CR>", opts)
 keymap("n", "<leader>tv", "<CMD>ToggleTerm size=80 direction=vertical<CR>", opts)

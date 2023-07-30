@@ -1,9 +1,9 @@
 require("options")
 require("plugins")
 require("theme-config")
-vim.cmd("colorscheme tokyonight") -- duskfox nordfox tokyonight-night/storm/moon/
+vim.cmd("colorscheme tokyonight-storm") -- duskfox nordfox tokyonight-night/storm/moon/
 require("keymap-config") -- catppuccin-frappe/macchiato/mocha  rose-pine
-require("tree-config")
+require("neo-tree-config")
 require("lualine-config")
 require("barbar-config")
 require("lsp.lsp-config")
@@ -41,3 +41,5 @@ require("rust-tools-config")
 require("crates-config")
 require("glance-config")
 require("trouble-config")
+require("vim-illuminate")
+require("todo-comments-config")

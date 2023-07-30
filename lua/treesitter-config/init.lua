@@ -20,6 +20,7 @@ require("nvim-treesitter.configs").setup({
 		"markdown_inline",
 		"dockerfile",
 		"typescript",
+		"astro",
 	},
 	context_commentstring = {
 		enable = true,

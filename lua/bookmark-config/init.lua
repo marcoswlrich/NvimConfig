@@ -11,8 +11,8 @@ vim.g.bookmark_location_list = 0
 vim.g.bookmark_disable_ctrlp = 1
 vim.g.bookmark_display_annotation = 0
 
-require('telescope').extensions.vim_bookmarks.all()
-require('telescope').extensions.vim_bookmarks.current_file()
+require("telescope").extensions.vim_bookmarks.all()
+require("telescope").extensions.vim_bookmarks.current_file()
 
-vim.keymap.set('n', 'ma', "<cmd>lua require('telescope').extensions.vim_bookmarks.all()<cr>")
-vim.keymap.set('n', 'mn', "<cmd>lua require('telescope').extensions.vim_bookmarks.current_file()<cr>")
+vim.keymap.set("n", "ma", "<cmd>lua require('telescope').extensions.vim_bookmarks.all()<cr>")
+vim.keymap.set("n", "mn", "<cmd>lua require('telescope').extensions.vim_bookmarks.current_file()<cr>")

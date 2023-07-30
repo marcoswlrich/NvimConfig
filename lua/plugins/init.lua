@@ -38,18 +38,11 @@ require("lazy").setup({
 		dependencies = "MunifTanjim/nui.nvim",
 	},
 	{
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-	},
-	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
 	},
-	"EdenEast/nightfox.nvim",
+	"rebelot/kanagawa.nvim",
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	"rmehri01/onenord.nvim",
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
@@ -157,7 +150,7 @@ require("lazy").setup({
 		"ruifm/gitlinker.nvim",
 		dependencies = "nvim-lua/plenary.nvim",
 	},
-	{ "TimUntersberger/neogit", dependencies = "nvim-lua/plenary.nvim" },
+	{ "NeogitOrg/neogit", dependencies = "nvim-lua/plenary.nvim" },
 	{
 		"Rawnly/gist.nvim",
 		cmd = { "GistCreate", "GistCreateFromFile", "GistsList" },
@@ -222,5 +215,26 @@ require("lazy").setup({
 		cmd = { "TroubleToggle", "Trouble" },
 		opts = { use_diagnostic_signs = true },
 		lazy = true,
+	},
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+		event = "VeryLazy",
+	},
+	{
+		"RRethy/vim-illuminate",
+		event = { "BufReadPost", "BufNewFile" },
+		lazy = false,
+	},
+	{
+		"folke/todo-comments.nvim",
+		enabled = true,
+		dependencies = "nvim-lua/plenary.nvim",
+		cmd = { "TodoTrouble", "TodoTelescope" },
+		event = { "BufReadPost", "BufNewFile" },
 	},
 })

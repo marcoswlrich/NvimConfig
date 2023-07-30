@@ -1,18 +1,23 @@
 local status, saga = pcall(require, "lspsaga")
-if (not status) then return end
-
+if not status then
+	return
+end
 
 local keymap = vim.keymap.set
 
 saga.setup({
-  ui = {
-    winblend = 10,
-    border = 'rounded',
-  },
-  definition = {
-    edit = "<CR>",
-    quit = { "q", "<ESC>" },
-  },
+	ui = {
+		border = "rounded",
+	},
+	symbol_in_winbar = {
+		enable = false,
+	},
+	lightbulb = {
+		enable = false,
+	},
+	outline = {
+		layout = "float",
+	},
 })
 
 local opts = { noremap = true, silent = true }
@@ -25,12 +30,11 @@ keymap("n", "gd", "<cmd><cmd>Lspsaga peek_definition<CR><CR>", opts)
 keymap("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
 keymap("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts)
 
-
-
-
 local codeaction = require("lspsaga.codeaction")
-vim.keymap.set("n", "<leader>ca", function() codeaction:code_action() end, { silent = true })
+vim.keymap.set("n", "<leader>ca", function()
+	codeaction:code_action()
+end, { silent = true })
 vim.keymap.set("v", "<leader>ca", function()
-  vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-U>", true, false, true))
-  codeaction:range_code_action()
+	vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-U>", true, false, true))
+	codeaction:range_code_action()
 end, { silent = true })

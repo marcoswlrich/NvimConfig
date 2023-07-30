@@ -207,7 +207,7 @@ local mappings = {
 		f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
 		F = { "<cmd>LspToggleAutoFormat<cr>", "Toggle Autoformat" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
-		H = { "<cmd>IlluminationToggle<cr>", "Toggle Doc HL" },
+		H = { "<cmd>IlluminateToggle<cr>", "Toggle Doc HL" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		j = {
 			"<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>",
@@ -264,10 +264,11 @@ local mappings = {
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
 	T = {
-		name = "Treesitter",
-		h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" },
-		p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" },
-		r = { "<cmd>TSToggle rainbow<cr>", "Rainbow" },
+		name = "+Todo",
+		t = { "<cmd>TodoTelescope<cr>", "todo" },
+		T = { "<cmd>TodoTelescope keywords=TODO,FIX,NOTE<cr>", "Todo/Fix/Note" },
+		x = { "<cmd>TodoTrouble<cr>", "Todo (Trouble)" },
+		X = { "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<cr><cr>", "Todo/Fix/Fixme (Trouble)" },
 	},
 	y = {
 		name = "Yarn",

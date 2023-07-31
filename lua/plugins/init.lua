@@ -227,7 +227,6 @@ require("lazy").setup({
 	},
 	{
 		"RRethy/vim-illuminate",
-		event = { "BufReadPost", "BufNewFile" },
 		lazy = false,
 	},
 	{
@@ -236,5 +235,19 @@ require("lazy").setup({
 		dependencies = "nvim-lua/plenary.nvim",
 		cmd = { "TodoTrouble", "TodoTelescope" },
 		event = { "BufReadPost", "BufNewFile" },
+	},
+	{
+		"editorconfig/editorconfig-vim",
+		lazy = true,
+	},
+	{
+		"ThePrimeagen/refactoring.nvim",
+		dependencies = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+		config = function()
+			require("refactoring").setup({})
+		end,
 	},
 })

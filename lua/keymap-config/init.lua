@@ -22,6 +22,23 @@ keymap("n", "<leader>se", "<C-w>=", opts) -- deixar janelas abertas com mesmo ta
 keymap("n", "<leader>sx", ":close<CR>", opts) -- close split window
 --keymap("n", "<C-Space>", "<cmd>WhichKey \\<leader><cr>", opts)
 
+-- Mantenha o cursor centralizado ao rolar
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+
+-- Remapear para lidar com quebras de linha visual
+keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
+keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
+
+-- copie tudo entre { e } incluindo os colchetes
+-- p coloca o texto após o cursor,
+-- P coloca o texto antes do cursor.
+keymap("n", "YY", "va{Vy", opts)
+
+keymap("n", "+", ":vertical resize +5<CR>", opts)
+keymap("n", "_", ":vertical resize -5<CR>", opts)
+keymap("n", "=", ":resize +5<CR>", opts)
+keymap("n", "-", ":resize -5<CR>", opts)
 ------------------
 --VisuaL Mode
 ------------------
@@ -40,7 +57,6 @@ keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 ----------------------
--- Plugin Keybinds
 ----------------------
 
 keymap("n", "<leader>e", ":Neotree<CR>", opts)
@@ -58,8 +74,9 @@ keymap("n", "<A-6>", ":BufferGoto 6<CR>", opts)
 keymap("n", "<A-7>", ":BufferGoto 7<CR>", opts)
 keymap("n", "<A-8>", ":BufferGoto 8<CR>", opts)
 keymap("n", "<A-9>", ":BufferGoto 9<CR>", opts)
-keymap("n", "<A-,>", ":BufferPrevious<CR>", opts)
 keymap("n", "<A-.>", ":BufferNext<CR>", opts)
 keymap("n", "<A-0>", ":BufferLast<CR>", opts)
 keymap("n", "<A-c>", ":BufferClose<CR>", opts)
 keymap("n", "<A-s-c>", ":BufferRestore<CR>", opts)
+keymap("n", "<A-,>", ":BufferPrevious<CR>", opts)
+-- Plugin Keybinds

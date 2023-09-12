@@ -2,7 +2,7 @@ return {
   -- gopher
   {
     "olexsmir/gopher.nvim",
-    enabled = false,
+    ft = "go",
     dependencies = {
       "leoluz/nvim-dap-go"
     },
@@ -20,13 +20,16 @@ return {
         goimport = "gopls",
         gofmt = "gopls",
       })
-    end
+    end,
+    build = function()
+      vim.cmd([[silent! GoInstallDeps]])
+    end,
   },
   -- go
   {
     "ray-x/go.nvim",
     enabled = true,
-    dependencies = {     -- optional packages
+    dependencies = { -- optional packages
       "ray-x/guihua.lua",
       "neovim/nvim-lspconfig",
       "nvim-treesitter/nvim-treesitter",
@@ -37,6 +40,6 @@ return {
     end,
     event = { "CmdlineEnter" },
     ft = { "go", 'gomod' },
-    build = ':lua require("go.install").update_all_sync()'     -- if you need to install/update all binaries
+    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
   },
 }

@@ -1,9 +1,11 @@
 return {
-  { 'wakatime/vim-wakatime' },
-  { "folke/neoconf.nvim",            cmd = "Neoconf" },
-  { "nvim-lua/plenary.nvim" },
-  { "nvim-lua/popup.nvim" },
-  { "christoomey/vim-tmux-navigator" },
+  "wakatime/vim-wakatime",
+  "nvim-lua/plenary.nvim",
+  "nvim-lua/popup.nvim",
+  "christoomey/vim-tmux-navigator",
+  "folke/neodev.nvim",
+  { "folke/neoconf.nvim", cmd = "Neoconf" },
+
   {
     'numToStr/Comment.nvim',
     lazy = false,

@@ -131,9 +131,9 @@ return {
           on_attach = function(_, bufnr)
             on_attach(_, bufnr)
           end,
-          cmp = { "rustup", "run", "stable", "rust-analyzer" },
+          cmd = { "rustup", "run", "stable", "rust-analyzer" },
           filetypes = { "rust" },
-          root_dir = util.root_pattern("Cargo.toml"),
+          root_dir = util.root_pattern("Cargo.toml", "rust-project.json"),
           settings = {
             ["rust-analyzer"] = {
               cargo = {
@@ -169,12 +169,33 @@ return {
           },
         }))
       end,
+      graphql = function()
+        require("lspconfig").graphql.setup(vim.tbl_extend("force", lsp_config, {
+          on_attach = function(_, bufnr)
+            on_attach(_, bufnr)
+          end,
+          cmd = { "graphql-lsp", "server", "-m", "stream" },
+          filetypes = { "graphql", "typescriptreact", "javascriptreact" },
+          root_dir = util.root_pattern('.git', '.graphqlrc*', '.graphql.config.*', 'graphql.config.*')
+        }))
+      end,
+      marksman = function()
+        require("lspconfig").marksman.setup(vim.tbl_extend("force", lsp_config, {
+          on_attach = function(_, bufnr)
+            on_attach(_, bufnr)
+          end,
+          cmd = { "marksman", "server" },
+          filetypes = { "markdown" },
+          root_dir = util.root_pattern(".git", ".marksman.toml"),
+          single_file_suport = true,
+        }))
+      end,
       tailwindcss = function()
         require("lspconfig").tailwindcss.setup(vim.tbl_extend("force", lsp_config, {
           on_attach = function(_, bufnr)
             on_attach(_, bufnr)
           end,
-          cmp = { "tailwindcss-language-server", "--stdio" },
+          cmd = { "tailwindcss-language-server", "--stdio" },
           filetypes = {
             "aspnetcorerazor",
             "astro",
@@ -237,7 +258,7 @@ return {
           on_attach = function(_, bufnr)
             on_attach(_, bufnr)
           end,
-          cmp = { "clangd" },
+          cmd = { "clangd" },
           root_dir = util.root_pattern(
             ".clangd",
             ".clang-tidy",

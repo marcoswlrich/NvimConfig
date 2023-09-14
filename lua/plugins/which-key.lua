@@ -42,7 +42,7 @@ return {
       icons = {
         breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
         separator = "➜", -- symbol used between a key and it's label
-        group = "+",      -- symbol prepended to a group
+        group = "+", -- symbol prepended to a group
       },
       popup_mappings = {
         scroll_down = "<c-d>", -- binding to scroll down inside the popup
@@ -96,6 +96,22 @@ return {
         W = { "<cmd>noautocmd w<cr>", "Save without formatting (noautocmd)" },
       },
       c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+      C = {
+        name = "+Rust Crates",
+        o = { "<cmd>lua require('crates').show_popup()<CR>", "Show popup" },
+        r = { "<cmd>lua require('crates').reload()<CR>", "Reload" },
+        v = { "<cmd>lua require('crates').show_versions_popup()<CR>", "Show Versions" },
+        f = { "<cmd>lua require('crates').show_features_popup()<CR>", "Show Features" },
+        d = { "<cmd>lua require('crates').show_dependencies_popup()<CR>", "Show Dependencies Popup" },
+        u = { "<cmd>lua require('crates').update_crate()<CR>", "Update Crate" },
+        a = { "<cmd>lua require('crates').update_all_crates()<CR>", "Update All Crates" },
+        U = { "<cmd>lua require('crates').upgrade_crate<CR>", "Upgrade Crate" },
+        A = { "<cmd>lua require('crates').upgrade_all_crates(true)<CR>", "Upgrade All Crates" },
+        H = { "<cmd>lua require('crates').open_homepage()<CR>", "Open Homepage" },
+        R = { "<cmd>lua require('crates').open_repository()<CR>", "Open Repository" },
+        D = { "<cmd>lua require('crates').open_documentation()<CR>", "Open Documentation" },
+        C = { "<cmd>lua require('crates').open_crates_io()<CR>", "Open Crate.io" },
+      },
       d = {
         name = "Debug",
         b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
@@ -164,6 +180,18 @@ return {
           "Diff",
         },
       },
+      G = {
+        name = "+Go",
+        s = {
+          name = "+Stuct",
+          j = { "<cmd> GoTagAdd json <CR>", "Add json tag" },
+          y = { "<cmd> GoTagAdd yaml <CR>", "Add yaml tag" },
+          J = { "<cmd> GoTagRm json <CR>", "Remove json tag" },
+          Y = { "<cmd> GoTagRm yaml <CR>", "Remove yaml tag" },
+        },
+        t = { "<cmd>GoMod tidy<cr>", "go mod tidy" },
+        e = { "<cmd>GoIfErr<cr>", "Generate if err" },
+      },
       h = { "<cmd>split<cr>", "split" },
       -- k = {}
       l = {
@@ -186,12 +214,15 @@ return {
 
         h = { "<cmd>lua require('config.utils').toggle_inlay_hints()<CR>", "Toggle Inlay Hints" },
       },
+      L = {
+        f = { "<cmd>GoFmt<cr>", "Format (GoFmt)" },
+      },
       m = {
         name = "Markdown",
         m = { "<cmd>MarkdownPreviewToggle<CR>", "markdown preview" },
       },
       -- n =
-      -- o =
+      --o =
       p = {
         name = "Python",
         c = { "<cmd>PyrightOrganizeImports<cr>", "Organize Imports" },

@@ -8,6 +8,7 @@ return {
       "HiPhish/nvim-ts-rainbow2",
       "axelvc/template-string.nvim",
       'JoosepAlviste/nvim-ts-context-commentstring',
+      "nvim-treesitter/nvim-treesitter-textobjects",
 
     },
     config = function()
@@ -47,12 +48,10 @@ return {
 
         highlight = {
           enable = true,
-          disable = {},
           additional_vim_regex_highlighting = false,
         },
         indent = {
           enable = true,
-          disable = {},
         },
         autotag = {
           enable = true,
@@ -223,8 +222,8 @@ return {
         -- [!] The options below are exposed but shouldn't require your attention,
         --     you can safely ignore them.
 
-        zindex = 20,     -- The Z-index of the context window
-        mode = 'cursor', -- Line used to calculate context. Choices: 'cursor', 'topline'
+        zindex = 20,      -- The Z-index of the context window
+        mode = 'topline', -- Line used to calculate context. Choices: 'cursor', 'topline'
         -- Separator between context and content. Should be a single character string, like '-'.
         -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
         separator = nil,

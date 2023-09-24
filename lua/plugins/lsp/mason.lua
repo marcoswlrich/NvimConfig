@@ -45,6 +45,7 @@ return {
         "jsonls",
         "gopls",
         "marksman",
+        "astro",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -54,8 +55,9 @@ return {
       -- list of formatters & linters for mason to install
       ensure_installed = {
         "prettier", -- ts/js formatter
-        "stylua", -- lua formatter
+        "stylua",   -- lua formatter
         "eslint_d",
+        "clang-format",
         "mypy",
         "ruff",
         "black", -- ts/js linter

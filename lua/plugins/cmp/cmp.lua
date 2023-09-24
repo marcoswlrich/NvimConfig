@@ -3,13 +3,14 @@ return {
   event = "InsertEnter",
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",           -- source for text in buffer
+    "hrsh7th/cmp-buffer",                                        -- source for text in buffer
     "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",          -- source for file system paths
-    "L3MON4D3/LuaSnip",             -- snippet engine
-    "saadparwaiz1/cmp_luasnip",     -- for autocompletion
-    "rafamadriz/friendly-snippets", -- useful snippets
-    "onsails/lspkind.nvim",         -- vs-code like pictograms
+    "hrsh7th/cmp-cmdline",                                       -- source for file system paths
+    "L3MON4D3/LuaSnip",                                          -- snippet engine
+    "saadparwaiz1/cmp_luasnip",                                  -- for autocompletion
+    "rafamadriz/friendly-snippets",                              -- useful snippets
+    "onsails/lspkind.nvim",
+    { "roobert/tailwindcss-colorizer-cmp.nvim", config = true }, -- vs-code like pictograms
   },
   config = function()
     local cmp = require("cmp")
@@ -25,7 +26,7 @@ return {
           if vim.fn.hlID(group) < 1 then
             vim.api.nvim_set_hl(0, group, { fg = "#" .. color })
           end
-          vim_item.kind = "●"
+          vim_item.kind = "■"
           vim_item.kind_hl_group = group
           return vim_item
         end

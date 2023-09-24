@@ -16,8 +16,6 @@ return {
       })
     end
 
-
-
     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
       underline = true,
       update_in_insert = false,
@@ -59,9 +57,6 @@ return {
       local project_root = util.find_node_modules_ancestor(root_dir)
       return project_root and (util.path.join(project_root, 'node_modules', 'typescript', 'lib')) or ''
     end
-
-
-
 
     local lsp_config = {
       capabilities = capabilities,

@@ -5,7 +5,6 @@ return {
   "christoomey/vim-tmux-navigator",
   "folke/neodev.nvim",
   { "folke/neoconf.nvim", cmd = "Neoconf" },
-
   {
     'numToStr/Comment.nvim',
     event = { "BufReadPre", "BufNewFile" },
@@ -30,4 +29,23 @@ return {
     "editorconfig/editorconfig-vim",
     lazy = true,
   },
+  {
+    'Wansmer/treesj',
+    keys = { '<space>j', '<space>J' },
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('treesj').setup()
+      -- For use default preset and it work with dot
+      vim.keymap.set('n', '<leader>j', require('treesj').toggle)
+      -- For extending default preset with `recursive = true`, but this doesn't work with dot
+      vim.keymap.set('n', '<leader>J', function()
+        require('treesj').toggle({ split = { recursive = true } })
+      end)
+    end,
+  },
+  {
+    'ziglang/zig.vim',
+    ft = "zig",
+  },
+
 }

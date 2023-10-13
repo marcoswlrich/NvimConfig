@@ -31,6 +31,7 @@ return {
           "yaml",
           "html",
           "css",
+          "zig",
           "markdown",
           "markdown_inline",
           "dockerfile",

@@ -13,7 +13,7 @@ return {
         commands = {
           go = "go",
           gomodifytags = "gomodifytags",
-          gotests = "gotests",
+          gotests = "~/go/bin/gotests",
           impl = "impl",
           iferr = "iferr",
         },

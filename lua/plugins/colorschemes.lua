@@ -39,7 +39,7 @@ return {
         --on_highlights = function(highlights, colors)
         --end,
       })
-      vim.cmd("colorscheme tokyonight-storm")
+      --vim.cmd("colorscheme tokyonight-storm")
       vim.fn.sign_define({
         {
           name = "DiagnosticSignError",
@@ -157,7 +157,7 @@ return {
         end,
       })
 
-      -- vim.api.nvim_command("colorscheme catppuccin")
+      vim.api.nvim_command("colorscheme catppuccin")
     end,
   },
   {
@@ -167,7 +167,7 @@ return {
     config = function()
       vim.o.background = "dark"
       vim.g.gruvbox_material_background = "hard"
-      -- vim.g.gruvbox_material_transparent_background = 1
+      --vim.g.gruvbox_material_transparent_background = 1
       --vim.cmd.colorscheme 'gruvbox-material'
     end,
   },
@@ -177,7 +177,7 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       -- load the colorscheme here
-      -- vim.cmd.colorscheme("night-owl")
+      --vim.cmd.colorscheme("night-owl")
     end,
   },
   {
@@ -210,7 +210,7 @@ return {
           }
         }
       })
-      -- vim.cmd("colorscheme kanagawa-wave")
+      --vim.cmd("colorscheme kanagawa-wave")
     end
   },
   {

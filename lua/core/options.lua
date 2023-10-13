@@ -19,7 +19,8 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.smarttab = true
 opt.autoindent = true -- copy indent from current line when starting new one
-
+opt.colorcolumn = "80"
+--opt.textwidth = 80 --  set row width size in characters
 -- line wrapping
 opt.wrap = false -- disable line wrapping
 
@@ -30,6 +31,7 @@ opt.smartindent = true
 
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
+opt.linebreak = true
 
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
@@ -69,6 +71,7 @@ opt.showcmd = false
 opt.title = true
 opt.confirm = true
 opt.fillchars = { eob = " " }
+opt.shell = "zsh"
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "

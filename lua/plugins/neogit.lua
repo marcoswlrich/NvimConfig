@@ -62,7 +62,23 @@ return {
       },
       -- override/add mappings
       mappings = {
-        -- modify status buffer mappings
+        popup = {
+          ["?"] = "HelpPopup",
+          ["A"] = "CherryPickPopup",
+          ["D"] = "DiffPopup",
+          ["M"] = "RemotePopup",
+          ["P"] = "PushPopup",
+          ["X"] = "ResetPopup",
+          ["Z"] = "StashPopup",
+          ["b"] = "BranchPopup",
+          ["c"] = "CommitPopup",
+          ["f"] = "FetchPopup",
+          ["l"] = "LogPopup",
+          ["m"] = "MergePopup",
+          ["p"] = "PullPopup",
+          ["r"] = "RebasePopup",
+          ["v"] = "RevertPopup",
+        },
         status = {
           ["q"] = "Close",
           ["1"] = "Depth1",
@@ -84,15 +100,6 @@ return {
           ["<c-v>"] = "VSplitOpen",
           ["<c-x>"] = "SplitOpen",
           ["<c-t>"] = "TabOpen",
-          ["?"] = "HelpPopup",
-          ["D"] = "DiffPopup",
-          ["p"] = "PullPopup",
-          ["r"] = "RebasePopup",
-          ["P"] = "PushPopup",
-          ["c"] = "CommitPopup",
-          ["L"] = "LogPopup",
-          ["Z"] = "StashPopup",
-          ["b"] = "BranchPopup",
           -- ["<space>"] = "Stage",
           -- Removes the default mapping of "s"
           -- ["s"] = "",

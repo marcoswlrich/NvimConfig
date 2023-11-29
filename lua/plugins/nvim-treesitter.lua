@@ -7,7 +7,6 @@ return {
       "windwp/nvim-ts-autotag",
       "HiPhish/nvim-ts-rainbow2",
       "axelvc/template-string.nvim",
-      'JoosepAlviste/nvim-ts-context-commentstring',
       "nvim-treesitter/nvim-treesitter-textobjects",
 
     },
@@ -37,10 +36,6 @@ return {
           "dockerfile",
           "typescript",
           "astro",
-        },
-        context_commentstring = {
-          enable = true,
-          enable_autocmd = false,
         },
 
         sync_install = false,

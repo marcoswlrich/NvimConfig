@@ -1,58 +1,60 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    version = false,
     event = { "BufReadPre", "BufNewFile" },
     build = ":TSUpdate",
     dependencies = {
       "windwp/nvim-ts-autotag",
-      "HiPhish/nvim-ts-rainbow2",
       "axelvc/template-string.nvim",
       "nvim-treesitter/nvim-treesitter-textobjects",
-
     },
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = {
-          "tsx",
-          "c",
-          "cpp",
-          "lua",
-          "python",
-          "rust",
-          "go",
-          "vue",
-          "gomod",
-          "json",
-          "graphql",
-          "javascript",
-          "regex",
-          "vim",
-          "yaml",
-          "html",
-          "css",
-          "zig",
-          "markdown",
-          "markdown_inline",
-          "dockerfile",
-          "typescript",
-          "astro",
-        },
-
         sync_install = false,
-        auto_install = true,
-        ignore_install = {},
-
+        ignore_install = { "javascript" },
+        modules = {},
         highlight = {
           enable = true,
           additional_vim_regex_highlighting = false,
         },
-        indent = {
-          enable = true,
+        indent = { enable = true },
+        -- context_commentstring = { enable = true, enable_autocmd = false },
+        auto_install = true,
+        ensure_installed = {
+          -- "bash",
+          "c",
+          "cpp",
+          "html",
+          "css",
+          "javascript",
+          "json",
+          "lua",
+          "luadoc",
+          "luap",
+          "markdown",
+          "markdown_inline",
+          "python",
+          "query",
+          "regex",
+          "tsx",
+          "typescript",
+          "vue",
+          "vim",
+          "vimdoc",
+          "yaml",
+          "rust",
+          "go",
+          "gomod",
+          "gowork",
+          "gosum",
+          "terraform",
+          "proto",
+          "graphql",
+          "dockerfile",
+          "astro",
+          "zig",
         },
-        autotag = {
-          enable = true,
-        },
-
         incremental_selection = {
           enable = true,
           keymaps = {
@@ -61,6 +63,9 @@ return {
             scope_incremental = false,
             node_decremental = "_",
           },
+        },
+        autotag = {
+          enable = true,
         },
         textobjects = {
           select = {
@@ -81,12 +86,12 @@ return {
               ["ip"] = { query = "@parameter.inner", desc = "inside a parameter" },
             },
             selection_modes = {
-              ["@parameter.outer"] = "v",   -- charwise
-              ["@parameter.inner"] = "v",   -- charwise
-              ["@function.outer"] = "v",    -- charwise
+              ["@parameter.outer"] = "v", -- charwise
+              ["@parameter.inner"] = "v", -- charwise
+              ["@function.outer"] = "v", -- charwise
               ["@conditional.outer"] = "V", -- linewise
-              ["@loop.outer"] = "V",        -- linewise
-              ["@class.outer"] = "<c-v>",   -- blockwise
+              ["@loop.outer"] = "V", -- linewise
+              ["@class.outer"] = "<c-v>", -- blockwise
             },
             include_surrounding_whitespace = false,
           },
@@ -115,11 +120,10 @@ return {
           },
         },
       })
-
       require("template-string").setup({
-        filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact", "python" }, -- filetypes where the plugin is active
-        jsx_brackets = true,                                                                        -- must add brackets to jsx attributes
-        remove_template_string = false,                                                             -- remove backticks when there are no template string
+        filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact", "vue", "svelte", "python" }, -- filetypes where the plugin is active
+        jsx_brackets = true, -- must add brackets to jsx attributes
+        remove_template_string = false, -- remove backticks when there are no template string
         restore_quotes = {
           -- quotes used when "remove_template_string" option is enabled
           normal = [[']],
